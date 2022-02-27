@@ -1,0 +1,221 @@
+*,*::before, *::after{
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Play', sans-serif;
+    background: radial-gradient(circle, rgba(255,222,0,1) 28%, rgba(255,175,0,1) 100%);
+    overflow: hidden;
+}
+
+.world{
+    /* width: 100%;
+    height: 200px; */
+    overflow: hidden;
+    position: relative;
+}
+
+/* sanash----------------- */
+.score{
+    position: absolute;
+    font-size: 4vmin;
+    font-weight: 500;
+    top: 15vmin;
+    right: 5vmin;
+}
+
+
+/* game over--------------- */
+.start-screen{
+    position: absolute;
+    font-size: 5vmin;
+    font-weight: 700;
+    color: rgb(88, 88, 88);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.hide{
+    display: none;
+}
+
+/* trektoriyasi-------------- */
+.ground{
+    --left: 0;
+    position: absolute;
+    height: 5%;
+    width: 300%;
+    bottom: 0;
+    left: calc(var(--left) * 1%);
+}
+
+
+.dino{
+    --bottom: 0;
+    position: absolute;
+    height: 20%;
+    left: 10%;
+    bottom: calc(var(--bottom) * 1%);
+}
+
+.cactus{
+    position: absolute;
+    height: 20%;
+    bottom: 0;
+    left: calc(var(--left) * 1%);
+}
+
+
+
+
+/* 
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo img{
+    width: 30px;
+}
+
+.game-div{
+    width: 800px;
+    height: 300px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#dino{
+    width: 40px;
+    height: 40px;
+    background-image: url(/images/dino-stationary.png);
+    background-size: 40px 40px;
+    position: relative;
+    top: 245px;  
+    left: 100px;
+}
+
+.jump{
+    animation: jump 0.4s linear;
+}
+
+
+@keyframes jump {
+    0%,100%{
+        top: 245px;
+    }
+
+    30%,80%{
+        top: 180px;
+    }
+
+    50%{
+        top: 140px;
+    }
+}
+
+
+
+#cactus{
+    width: 50px;
+    height: 60px;
+    position: relative;
+    top: -10%;
+    left: 100%;
+    background-image: url(/images/cactus2.png);
+    background-size: 50px 60px;
+
+    animation: moveCactus 1.7s infinite linear;
+}
+
+
+@keyframes moveCactus {
+    to{
+        left: 0;
+    }
+
+    100%{
+        left: -50px;
+    }
+}  */
+
+
+#cloud{
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    
+}
+
+#cloud.stop-cloud{
+    animation: cloud 10s infinite linear;
+}        
+
+@keyframes cloud {
+    0%{
+        left: 1200px;
+    }
+    
+    100%{
+        left: -500px;
+    }
+}
+
+#cloud img{
+    position: absolute;
+    width: 60px;
+}
+
+#cloud .cloud1{
+    width: 50px;
+    position: absolute;
+    top: -90px;
+    z-index: 3;
+}
+
+#cloud .cloud2{
+    top: -75px;     
+    left: 32px;
+}
+
+#cloud .cloud3{
+    top: -65px;
+    left: 202px;
+}
+
+#cloud .cloud4{
+    top: -50px;
+    left: 250px;
+}
+
+#cloud .cloud5{
+    top: -70px;
+    left: 400px;
+}
+
+#cloud .cloud6{
+    top: -75px;
+    left: 450px;
+}
+
